@@ -1,0 +1,275 @@
+.contact-section {
+    padding: 120px 0;
+    background-color: transparent; /* Transparent for 3D background */
+    color: #050505;
+    position: relative;
+    z-index: 10;
+}
+
+.contact-header {
+    margin-bottom: 60px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+}
+
+/* Left Card */
+.left-card {
+    background: #FAFAFA;
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-icon {
+    margin-bottom: 4px;
+}
+
+.info-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: #050505;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.info-value {
+    font-size: 0.95rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* Socials in left card */
+.socials-block {
+    margin-top: auto; /* push to bottom if necessary, or just natural flow */
+    padding-top: 16px;
+}
+
+.socials-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.socials-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    color: #050505;
+    transition: all 0.2s ease;
+}
+
+.social-square:hover {
+    background: #050505;
+    color: #FAFAFA;
+}
+
+/* Right Card */
+.right-card {
+    background: transparent;
+    padding: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-group label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #050505;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon input,
+.input-group textarea {
+    width: 100%;
+    background: #FAFAFA;
+    border: 1px solid #777; /* visible dark grey border */
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #050505;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-with-icon input {
+    height: 50px;
+    padding: 0 45px 0 16px; /* Space for icon */
+}
+
+.input-group textarea {
+    padding: 16px;
+    resize: vertical;
+}
+
+.input-with-icon input:focus,
+.input-group textarea:focus {
+    border-color: #050505;
+}
+
+.input-with-icon input::placeholder,
+.input-group textarea::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.input-with-icon .icon {
+    position: absolute;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.input-with-icon .icon svg {
+    stroke: #050505;
+}
+
+/* Button */
+.submit-form-btn {
+    background: #050505;
+    color: #fff;
+    border: none;
+    padding: 0 24px;
+    height: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.2s;
+}
+
+.submit-form-btn:hover {
+    background: #2a2a2a;
+}
+
+.submit-form-btn .btn-icon {
+    stroke: #fff;
+}
+
+.submit-form-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    padding: 60px;
+    background: #FAFAFA;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.success-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.success-message h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.success-message p {
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 24px;
+}
+
+.error-text {
+    color: #e74c3c;
+    font-size: 0.85rem;
+}
+
+/* Hire Me Block */
+.hire-me-block {
+    margin-top: 10vw;
+    text-align: center;
+    padding-top: 80px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hire-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.hire-title {
+    font-size: clamp(4rem, 15vw, 12rem);
+    font-weight: 900;
+    color: #050505;
+    margin: 0;
+    letter-spacing: -4px;
+    line-height: 0.8;
+}
+
+@media (max-width: 1024px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .submit-form-btn {
+        width: 100%;
+    }
+    .hire-title {
+        letter-spacing: -2px;
+    }
+}

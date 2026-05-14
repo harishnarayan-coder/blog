@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-sans/style.css');
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #050505;
+  --accent-color: #e5e5e5;
+  --header-height: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* We will use the custom cursor, but preserve the default as a fallback instead of none */
+  cursor: auto;
+}
+
+body {
+  font-family: 'Geist Sans', 'Outfit', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Typography elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(5, 5, 5, 0.7);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.button-primary {
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 16px 32px;
+  border-radius: 100px;
+  /* Pill shape for premium feel */
+  font-weight: 500;
+  font-size: 1.1rem;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  background: #2a2a2a;
+}

@@ -1,0 +1,147 @@
+.footer {
+    background-color: #050505;
+    color: #FAFAFA;
+    padding-top: 80px;
+    overflow: hidden; /* Keeps the massive text contained */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 5%;
+    margin-bottom: 20px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-info p {
+    margin: 0;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 32px;
+}
+
+.footer-socials a {
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s;
+}
+
+.footer-socials a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #FAFAFA;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-socials a:hover::after {
+    width: 100%;
+}
+
+.back-top-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: none;
+    color: #FAFAFA;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+    padding: 0;
+}
+
+.back-top-btn svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.back-top-btn:hover svg {
+    transform: translateY(-5px);
+}
+
+.footer-bottom-huge {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.huge-text {
+    font-size: 24vw; /* Huge size to span edge-to-edge */
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 2vw; /* Provides a small breathing room at the bottom */
+    letter-spacing: -0.04em;
+    color: #FAFAFA;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    cursor: default;
+}
+
+.huge-text:hover {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .huge-text {
+        font-size: 26vw;
+        margin-bottom: 2vw;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer {
+        padding-top: 60px;
+    }
+    .footer-top {
+        padding: 0 8%;
+    }
+    .footer-socials {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .huge-text {
+        font-size: 28vw;
+        letter-spacing: -0.02em;
+        margin-bottom: 2vw;
+    }
+}

@@ -1,0 +1,135 @@
+.experience-section {
+    padding: 120px 0;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.experience-header {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.experience-section .section-title {
+    font-size: 3.5rem;
+    color: var(--text-color);
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* The vertical line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-icon {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    right: -24px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--text-color);
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.timeline-item.right .timeline-icon {
+    left: -24px;
+}
+
+.timeline-content {
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateY(-5px);
+}
+
+.timeline-date {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.timeline-title {
+    font-size: 1.75rem;
+    margin-bottom: 4px;
+}
+
+.timeline-subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 16px;
+}
+
+.timeline-details {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+.timeline-details li {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0px;
+    }
+
+    .timeline-item.right {
+        left: 0%;
+    }
+
+    .timeline-item.left .timeline-icon,
+    .timeline-item.right .timeline-icon {
+        left: 7px;
+    }
+}
